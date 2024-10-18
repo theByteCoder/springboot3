@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: springboot3
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/observability?authSource=admin
+      auto-index-creation: true
+  mvc:
+    problemdetails:
+      enabled: true
+server:
+  port: 8990
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
